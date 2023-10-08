@@ -4,10 +4,10 @@ import openai
 from datetime import datetime
 import requests
 
-bot = telebot.TeleBot('6056029456:AAGh11GfrbkHO0wZbLsJZKdeqnaYBX6jnKc')
+bot = telebot.TeleBot('Your_Telegram_API')
 
 NASA_API_ENDPOINT = "https://api.nasa.gov/planetary/apod"
-NASA_API_KEY = "8fWTySRPOaGSEXJ9kVzouIVXdowWUgEuIanM5WXI"
+NASA_API_KEY = "Your_Nasa_API"
 
 bot.remove_webhook()
 
@@ -15,7 +15,7 @@ chatStr = ''
 
 def ChatModel(prompt):
     global chatStr 
-    openai.api_key ='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'
+    openai.api_key ='Your_Openai_API'
     chatStr += f"Death:{prompt}\nJravis: "
     
     response = openai.Completion.create(
@@ -32,7 +32,7 @@ def ChatModel(prompt):
     
 def ChatModel(prompt):
     global chatStr 
-    openai.api_key = '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'
+    openai.api_key = 'Your_Openai_API'
     chatStr += f"Death:{prompt}\nJravis: "
     
     response = openai.Completion.create(
